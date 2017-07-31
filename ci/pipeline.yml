@@ -11,7 +11,8 @@ jobs:
       build: source
   - put: deliver-story
     params:
-      path: source
+      repos:
+      - source
 
 resources:
 - name: source
