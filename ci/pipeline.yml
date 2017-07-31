@@ -12,8 +12,6 @@ jobs:
   - put: deliver-story
     params:
       path: source
-      comment: Delivered to Docker Hub by Concourse after successful pipeline run
-
 
 resources:
 - name: source
