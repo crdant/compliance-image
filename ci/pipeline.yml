@@ -9,6 +9,11 @@ jobs:
   - put: image
     params:
       build: source
+  - put: deliver-story
+    parms:
+      path: source
+      comment: Delivered to Docker Hub by Concourse after successful pipeline run
+
 
 resources:
 - name: source
@@ -24,3 +29,10 @@ resources:
     username: ((docker-hub-username))
     password: ((docker-hub-password))
     repository: ((docker-hub-username))/((image-name))
+
+- name: deliver-story
+  type: tracker
+  source:
+    token: ((tracker-api-token))
+    project_id: ((tracker-project-id))
+    tracker_url: ((tracker-url))
