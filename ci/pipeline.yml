@@ -10,7 +10,7 @@ jobs:
     params:
       build: source
   - put: deliver-story
-    parms:
+    params:
       path: source
       comment: Delivered to Docker Hub by Concourse after successful pipeline run
 
